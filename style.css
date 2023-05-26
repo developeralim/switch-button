@@ -1,0 +1,61 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body{
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
+      display: grid;
+      place-items: center;
+}
+.box{
+      height: 100%;
+      width: 100%;
+      display: block;
+      border: none;
+      background: rgb(190, 189, 189);
+      border-radius: 20px;
+      padding: 4px;
+      cursor: pointer;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      pointer-events: none;
+}
+.switch{
+      height: 20px;
+      width: 33px;
+      overflow: hidden;
+      position: relative;
+}
+.switcher{
+      border: 3px solid white;
+      display: inline-block;
+      height: 100%;
+      width: 50%;
+      border-radius: 100%;
+}
+.switch input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      z-index: 1;
+      margin-left: -1px;
+      margin-top: -1px;
+      cursor: pointer;
+      opacity: 0;
+}
+/* moving */
+.switch input:checked ~ .box{
+      background-color: rgb(11, 199, 11);
+      justify-content: right;
+}
+.switch input:checked ~ .box .switcher{
+     background-color: white;
+}
+
